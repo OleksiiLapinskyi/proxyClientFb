@@ -1,0 +1,31 @@
+.signin-container {
+    background-color: #E9EBEE;
+    height: 200px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.signin-container a{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 55%;
+    height: 23%;
+    margin: auto;
+    min-width: 250px;
+}
+
+.search {
+    margin: auto !important;
+    width: 380px !important;
+}
+
+.profile {
+   display: inline;
+}
+
+.profile div {
+    display: inline-block;
+}
