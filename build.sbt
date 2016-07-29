@@ -15,3 +15,4 @@ libraryDependencies ++= Seq(
   cache,
   javaWs
 )
+libraryDependencies += "org.mockito" % "mockito-all" % "1.10.19"

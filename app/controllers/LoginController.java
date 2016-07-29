@@ -17,11 +17,12 @@ public class LoginController extends Controller {
     private static final String ACCESS_TOKEN = "access_token";
 
     @Inject
-    public LoginController(@Named("httpCache") AbstractComponent httpComponent){
+    public LoginController(AbstractComponent httpComponent){
         this.httpComponent = httpComponent;
     }
 
     public Result index() {
+        AbstractComponent.APP_URI = "http://" + request().host();
         if(request().cookie(ACCESS_TOKEN) != null){
             String accessToken = request().cookie(ACCESS_TOKEN).value();
             httpComponent.setAccessToken(accessToken);

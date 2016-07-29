@@ -21,13 +21,15 @@ import static play.test.Helpers.*;
 
 public class ApplicationTest extends WithApplication {
 
-    private final String TOKEN = "EAACEdEose0cBAFmUrqmXYWQOYrewRYjDaVYbTd8JDbFd2euRszBiKpRaowe2YCsIybVzMXN34Id7MaxbCzm8HD6jW1tHWQXO2RaeR1vK0pEZCTRmMwJQA81ZACQVXa30wKKCYj6fLNg4cqipIIh2XXP1lqWHZB3s2g5EF75bAZDZD";
+    private final String TOKEN = "EAACEdEose0cBAFRPee1uRrFDpzSzwP7ew2n0Ju407CubSrp0rsZBkTtwNLcTSoRNKTiOVYjMfZB965FihFUChwhSUsTePZCGgAJatAwZC19GZB3bsX7SwlumQhJCcyUWfPumqu9J17KpKYCqJgPiCVBhpKPZAMcYlfZARvZBUIudegZDZD";
     private final String APP_URI = "http://localhost:9000";
     @Override
     protected FakeApplication provideFakeApplication() {
         return new FakeApplication(new java.io.File("."), Helpers.class.getClassLoader(),
                 ImmutableMap.of("play.http.router", "router.Routes"), new ArrayList<String>(), null);
     }
+
+
 
     @Test
     public void testIndex() {

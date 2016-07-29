@@ -14,7 +14,7 @@ import services.facebook.FbConnection;
 public class DummyComponent extends AbstractComponent {
 
     //public static final String AUTH_URL = "http://localhost:9000/callback?code=AQDNI2_YLgavmuyXsqrTc6I7vHfe2wwrmHEsLzlXSrYjN7v2v162L0HZTHEnCgjk0ykVigxyd7kQ1iiOLvWlrzYbsFYyEK81gw6S2QqhtLXmXK2Lj2PRSRUQp0NVHu7Kzd_Fe0lXWumKVf9DH_l5TttD8RfSTZlAGUDyafbg7BBdipLG6pS9NBEdCuTzkdXzV793_ssfMgXzXsid3PxJKR-XibB-sdoMyvofH98K_LSsizb3YZZ2e9t1kt5be2lzcxey51-HBS6zg_uku1ke7JhllNwCMp4cCoIqSfcnQzvftMVAs7CXpvbrLpKv8MkGSUbvqWQ4SNYsVI3JGLApXJRx";
-    public static final String AUTH_URL = APP_URI + "/callback?code=AQDNI2_YLgavmuyXsqrTc6I7vHfe2wwrmHEsLzlXSrYjN7v2v162L0HZTHEnCgjk0ykVigxyd7kQ1iiOLvWlrzYbsFYyEK81gw6S2QqhtLXmXK2Lj2PRSRUQp0NVHu7Kzd_Fe0lXWumKVf9DH_l5TttD8RfSTZlAGUDyafbg7BBdipLG6pS9NBEdCuTzkdXzV793_ssfMgXzXsid3PxJKR-XibB-sdoMyvofH98K_LSsizb3YZZ2e9t1kt5be2lzcxey51-HBS6zg_uku1ke7JhllNwCMp4cCoIqSfcnQzvftMVAs7CXpvbrLpKv8MkGSUbvqWQ4SNYsVI3JGLApXJRx";
+    public static final String AUTH_URL = "/callback?code=AQDNI2_YLgavmuyXsqrTc6I7vHfe2wwrmHEsLzlXSrYjN7v2v162L0HZTHEnCgjk0ykVigxyd7kQ1iiOLvWlrzYbsFYyEK81gw6S2QqhtLXmXK2Lj2PRSRUQp0NVHu7Kzd_Fe0lXWumKVf9DH_l5TttD8RfSTZlAGUDyafbg7BBdipLG6pS9NBEdCuTzkdXzV793_ssfMgXzXsid3PxJKR-XibB-sdoMyvofH98K_LSsizb3YZZ2e9t1kt5be2lzcxey51-HBS6zg_uku1ke7JhllNwCMp4cCoIqSfcnQzvftMVAs7CXpvbrLpKv8MkGSUbvqWQ4SNYsVI3JGLApXJRx";
 
     public static final String ACCESS_TOKEN = "access_token=EAAMwWBZAZAcJcBAG8isAihqF1JKXoEqcQL9dvKEFXf1mduF2t0NBcZAjZB54hBeFsSwO9btsCDZBquYVZBCFpKU9tdOrOGkizYxeGO7kFn9nXkCjnSuKCZBBafHtRokDAZCaEILCyKM1ZAcLBWFmgJ6d4oD12ptrRl8VmSU28dE6PQAZDZD&expires=5107003\n";
 
@@ -33,7 +33,7 @@ public class DummyComponent extends AbstractComponent {
 
     @Override
     public String authentification() {
-        return AUTH_URL;
+        return APP_URI + AUTH_URL;
     }
 
     @Override

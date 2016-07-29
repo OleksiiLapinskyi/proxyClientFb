@@ -16,7 +16,7 @@ import java.net.URLEncoder;
 public class FbConnection {
     private final String FB_APP_ID = "897579820347543";
     private final String FB_APP_SECRET = "55ee1209b6561e96f3ba96c0081e48e7";
-    private final String REDIRECT_URI = AbstractComponent.APP_URI + "/callback";
+    private final String REDIRECT_URI = "/callback";
     private final String PERMISSIONS = "public_profile";
     private final String FIELDS = "id,name,picture,link";
 
@@ -31,7 +31,7 @@ public class FbConnection {
         try {
             fbLoginUrl = "http://www.facebook.com/dialog/oauth?client_id="
                     + FB_APP_ID + "&redirect_uri="
-                    + URLEncoder.encode(REDIRECT_URI, "UTF-8")
+                    + URLEncoder.encode(AbstractComponent.APP_URI + REDIRECT_URI, "UTF-8")
                     + "&scope=" + PERMISSIONS;
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -44,7 +44,7 @@ public class FbConnection {
         try {
             tokenUrl = "https://graph.facebook.com/oauth/access_token?"
                     + "client_id=" + FB_APP_ID + "&redirect_uri="
-                    + URLEncoder.encode(REDIRECT_URI, "UTF-8")
+                    + URLEncoder.encode(AbstractComponent.APP_URI + REDIRECT_URI, "UTF-8")
                     + "&client_secret=" + FB_APP_SECRET + "&code=" + code;
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();

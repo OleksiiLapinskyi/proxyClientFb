@@ -22,11 +22,12 @@ public class UserController extends Controller {
     private CacheComponent cacheComponent;
 
     @Inject
-    public UserController(@Named("httpCache") AbstractComponent httpComponent){
+    public UserController(AbstractComponent httpComponent){
         this.httpComponent = httpComponent;
     }
 
     public Promise<Result> userProfile(String userId){
+        AbstractComponent.APP_URI = "http://" + request().host();
         String accessToken = session().get("access_token");
         if (accessToken == null) {
             return Promise.pure(redirect(routes.LoginController.index().absoluteURL(request())));
